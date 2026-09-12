@@ -1,0 +1,84 @@
+{
+  "runId": "eval_0qabrrzyuu",
+  "suite": "kivi-semantic-memory-v1",
+  "startedAt": "2026-09-12T16:26:39.994Z",
+  "finishedAt": "2026-09-12T16:27:41.162Z",
+  "valid": true,
+  "pinnedNow": "2026-09-12T09:30:00+05:30",
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "byCategory": {
+      "episodic_locate": {
+        "pass": 3,
+        "total": 3
+      }
+    }
+  },
+  "latencyMs": {
+    "retrieval": {
+      "p50": 5499,
+      "p95": 5499
+    },
+    "endToEnd": {
+      "p50": 18258,
+      "p95": 18258,
+      "max": 25235
+    },
+    "note": "End-to-end includes a deliberate 6000ms gap between model calls (KIVI_RPM=10) to stay inside free-tier quota."
+  },
+  "rateLimit": {
+    "rpm": 10,
+    "minIntervalMs": 6000
+  },
+  "memoryState": {
+    "dictations": 500,
+    "active_entities": 27,
+    "candidate_entities": 7,
+    "facts": 221,
+    "preferences": 3,
+    "ignored": 562,
+    "events": 732
+  },
+  "costUsd": 0.0013840000000000002,
+  "dbBytes": {
+    "before": 7945768,
+    "after": 7945768
+  },
+  "results": [
+    {
+      "caseId": "ep-01",
+      "category": "episodic_locate",
+      "passed": true,
+      "verdict": "pass",
+      "detail": "ok",
+      "latencyMs": 25235,
+      "costUsd": 0.0007552000000000001,
+      "interactionId": "i_b3lrpvcs4u",
+      "question": "Hey Kivi, find the dictation I did around 5 PM yesterday in Slack and polish it for the meeting I'm walking into."
+    },
+    {
+      "caseId": "ep-02",
+      "category": "episodic_locate",
+      "passed": true,
+      "verdict": "pass",
+      "detail": "ok",
+      "latencyMs": 17630,
+      "costUsd": 0.0003107,
+      "interactionId": "i_hxblk821zt",
+      "question": "What did I write in Linear about splitting a ticket?"
+    },
+    {
+      "caseId": "ep-03",
+      "category": "episodic_locate",
+      "passed": true,
+      "verdict": "pass",
+      "detail": "ok",
+      "latencyMs": 18258,
+      "costUsd": 0.00031810000000000003,
+      "interactionId": "i_0o86akjgba",
+      "question": "What was the last thing I said in Slack yesterday?"
+    }
+  ]
+}

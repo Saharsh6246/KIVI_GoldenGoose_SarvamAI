@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+html, body { background: #FAF7F0; color: #17160F; }
+
+body {
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #E8DCC8; }
+
+.hairline { border-color: #DED5C4; }
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded-full border border-edge bg-white/70 px-2 py-[2px] font-mono text-[11px] text-muted transition;
+}
+.chip:hover { @apply border-accent text-accent; }
+
+.card { @apply rounded-lg border border-edge bg-white/60; }
+
+.kbd {
+  @apply rounded border border-edge bg-white px-1.5 py-0.5 font-mono text-[11px] text-muted;
+}
+
+textarea, input, select { @apply outline-none; }
+
+@keyframes pulse-soft { 0%,100% { opacity: .35 } 50% { opacity: 1 } }
+.listening { animation: pulse-soft 1.4s ease-in-out infinite; }

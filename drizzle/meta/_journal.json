@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1789215090855,
+      "tag": "0000_abnormal_mercury",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789216858800,
+      "tag": "0001_true_killraven",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789220623291,
+      "tag": "0002_uneven_maestro",
+      "breakpoints": true
+    }
+  ]
+}

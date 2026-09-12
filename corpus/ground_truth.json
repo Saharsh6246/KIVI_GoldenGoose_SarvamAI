@@ -1,0 +1,90 @@
+{
+  "persona": {
+    "name": "Ananya Iyer",
+    "role": "Staff engineer, Payments",
+    "company": "Northwind",
+    "timezone": "Asia/Kolkata"
+  },
+  "seed": 20260912,
+  "corpusNow": "2026-09-12T04:00:00.000Z",
+  "count": 500,
+  "scattered": [
+    {
+      "id": "meridian_launch_date",
+      "question": "When does Meridian go live?",
+      "answer": "21 October",
+      "note": "Stated as 14 October twice, then explicitly moved to 21 October. The later date is correct."
+    },
+    {
+      "id": "ledger_deploy_command",
+      "question": "What is the command I use to deploy ledger-svc to staging?",
+      "answer": "make deploy-staging SVC=ledger",
+      "note": "Dictated into Cursor on four separate occasions."
+    },
+    {
+      "id": "fernway_contact",
+      "question": "Who is my contact at Fernway?",
+      "answer": "Sandra Lopez",
+      "note": "Named in Mail and Slack across three dictations."
+    },
+    {
+      "id": "tollgate_owner",
+      "question": "Who owns Tollgate now?",
+      "answer": "Karthik Nair",
+      "note": "Handover stated once in Slack and confirmed once in Linear."
+    },
+    {
+      "id": "rca_deadline",
+      "question": "When is the RCA for the September incident due?",
+      "answer": "the Friday after the incident, 18 September",
+      "note": "Spread across an incident thread and a follow-up mail."
+    }
+  ],
+  "unanswerable": [
+    "What is Priya's phone number?",
+    "What did I say about the Zurich office?",
+    "What is my manager's spouse called?",
+    "How much does the Kestrel contract cost?",
+    "What did I dictate about Project Halberd?",
+    "Which airline did I book for the Tokyo trip?"
+  ],
+  "mustNotLearn": [
+    {
+      "id": "health",
+      "topic": "a physiotherapy appointment",
+      "why": "Health is never inferred as a fact about the person. The dictation stays searchable."
+    },
+    {
+      "id": "money",
+      "topic": "a compensation conversation",
+      "why": "Financial position is never stored as a fact about the person."
+    },
+    {
+      "id": "third_party",
+      "topic": "a colleague's family situation",
+      "why": "A private detail about someone else is not promoted to a fact."
+    },
+    {
+      "id": "mood",
+      "topic": "saying they are exhausted",
+      "why": "A message saying \"I am exhausted\" is a message, not a state Kivi records about the person."
+    }
+  ],
+  "preferences": [
+    {
+      "id": "slack_short",
+      "statement": "Keep Slack messages to two lines",
+      "occurrences": 3
+    },
+    {
+      "id": "no_hope_well",
+      "statement": "Don't open emails with \"Hope you're well\"",
+      "occurrences": 3
+    },
+    {
+      "id": "name_meridian",
+      "statement": "Always write Meridian, never MRD",
+      "occurrences": 3
+    }
+  ]
+}

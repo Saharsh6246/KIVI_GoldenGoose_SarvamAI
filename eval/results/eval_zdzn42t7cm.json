@@ -1,0 +1,51 @@
+{
+  "runId": "eval_zdzn42t7cm",
+  "suite": "kivi-semantic-memory-v1",
+  "startedAt": "2026-09-12T13:31:36.181Z",
+  "finishedAt": "2026-09-12T13:31:57.428Z",
+  "valid": true,
+  "pinnedNow": "2026-09-12T09:30:00+05:30",
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "byCategory": {
+      "cross_dictation": {
+        "pass": 0,
+        "total": 1
+      }
+    }
+  },
+  "latencyMs": {
+    "p50": 21228,
+    "p95": 21228,
+    "max": 21228
+  },
+  "memoryState": {
+    "dictations": 500,
+    "active_entities": 30,
+    "candidate_entities": 8,
+    "facts": 534,
+    "preferences": 10,
+    "ignored": 1526,
+    "events": 1874
+  },
+  "costUsd": 0.0017526,
+  "dbBytes": {
+    "before": 3829888,
+    "after": 3990568
+  },
+  "results": [
+    {
+      "caseId": "cd-02",
+      "category": "cross_dictation",
+      "passed": false,
+      "verdict": "fail",
+      "detail": "expected 1+ citations, got 0 | answer missing \"Sandra\"",
+      "latencyMs": 21228,
+      "costUsd": 0.0017526,
+      "interactionId": "i_415r6qk1mh",
+      "question": "Who is my contact at Fernway?"
+    }
+  ]
+}

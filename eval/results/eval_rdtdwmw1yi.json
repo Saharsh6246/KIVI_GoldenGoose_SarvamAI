@@ -1,0 +1,84 @@
+{
+  "runId": "eval_rdtdwmw1yi",
+  "suite": "kivi-semantic-memory-v1",
+  "startedAt": "2026-09-12T14:12:19.073Z",
+  "finishedAt": "2026-09-12T14:13:14.086Z",
+  "valid": true,
+  "pinnedNow": "2026-09-12T09:30:00+05:30",
+  "summary": {
+    "passed": 2,
+    "failed": 1,
+    "total": 3,
+    "byCategory": {
+      "episodic_locate": {
+        "pass": 2,
+        "total": 3
+      }
+    }
+  },
+  "latencyMs": {
+    "retrieval": {
+      "p50": 5831,
+      "p95": 5831
+    },
+    "endToEnd": {
+      "p50": 17863,
+      "p95": 17863,
+      "max": 19307
+    },
+    "note": "End-to-end includes a deliberate 6000ms gap between model calls (KIVI_RPM=10) to stay inside free-tier quota."
+  },
+  "rateLimit": {
+    "rpm": 10,
+    "minIntervalMs": 6000
+  },
+  "memoryState": {
+    "dictations": 500,
+    "active_entities": 27,
+    "candidate_entities": 7,
+    "facts": 221,
+    "preferences": 3,
+    "ignored": 562,
+    "events": 732
+  },
+  "costUsd": 0.0011504,
+  "dbBytes": {
+    "before": 7579088,
+    "after": 7937528
+  },
+  "results": [
+    {
+      "caseId": "ep-01",
+      "category": "episodic_locate",
+      "passed": true,
+      "verdict": "pass",
+      "detail": "ok",
+      "latencyMs": 19307,
+      "costUsd": 0.0005295,
+      "interactionId": "i_tcg495ik7j",
+      "question": "Hey Kivi, find the dictation I did around 5 PM yesterday in Slack and polish it for the meeting I'm walking into."
+    },
+    {
+      "caseId": "ep-02",
+      "category": "episodic_locate",
+      "passed": true,
+      "verdict": "pass",
+      "detail": "ok",
+      "latencyMs": 17863,
+      "costUsd": 0.0003107,
+      "interactionId": "i_16fb5scmnh",
+      "question": "What did I write in Linear about splitting a ticket?"
+    },
+    {
+      "caseId": "ep-03",
+      "category": "episodic_locate",
+      "passed": false,
+      "verdict": "fail",
+      "detail": "did not cite demo_5pm (d_9b74b7); cited [d_2722a3]",
+      "latencyMs": 17777,
+      "costUsd": 0.0003102,
+      "interactionId": "i_o9mm6imhpg",
+      "question": "What was the last thing I said in Slack before logging off yesterday?"
+    }
+  ]
+}

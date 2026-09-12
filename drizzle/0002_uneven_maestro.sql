@@ -1,0 +1,1 @@
+ALTER TABLE `interactions` ADD `raw_answer` text;
