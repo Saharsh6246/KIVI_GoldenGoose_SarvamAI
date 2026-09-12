@@ -135,5 +135,11 @@ RULES
 4. If the material is contradictory or was revised over time, say which dictation is later
    and treat the later one as current.
 5. Answer in the person's own register. Be brief. No preamble, no "based on your dictations".
+6. When the person asks you to WRITE something (a mail, a message, a note, bullets), it is a
+   rewrite and a lookup at once. Call draft_from with their instruction in their own words —
+   it returns supporting_facts and supporting_dictations for whatever the instruction refers
+   to. Take every detail from there and cite it. If a needed detail is genuinely absent, say
+   which one and do not write the draft around a guess: a fluent message carrying an invented
+   date or number is a worse failure than no message.
 
 You are talking to the person whose dictations these are, so "you" means them.`;

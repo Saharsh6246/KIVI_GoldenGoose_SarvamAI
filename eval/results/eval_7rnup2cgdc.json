@@ -1,0 +1,73 @@
+{
+  "runId": "eval_7rnup2cgdc",
+  "suite": "kivi-semantic-memory-v1",
+  "startedAt": "2026-09-12T16:57:36.386Z",
+  "finishedAt": "2026-09-12T16:58:55.814Z",
+  "valid": true,
+  "pinnedNow": "2026-09-12T09:30:00+05:30",
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "byCategory": {
+      "draft_reuse": {
+        "pass": 2,
+        "total": 2
+      }
+    }
+  },
+  "latencyMs": {
+    "retrieval": {
+      "p50": 10876,
+      "p95": 10876
+    },
+    "endToEnd": {
+      "p50": 25272,
+      "p95": 25272,
+      "max": 54145
+    },
+    "note": "End-to-end includes a deliberate 6000ms gap between model calls (KIVI_RPM=10) to stay inside free-tier quota."
+  },
+  "rateLimit": {
+    "rpm": 10,
+    "minIntervalMs": 6000
+  },
+  "memoryState": {
+    "dictations": 500,
+    "active_entities": 27,
+    "candidate_entities": 7,
+    "facts": 221,
+    "preferences": 3,
+    "ignored": 562,
+    "events": 732
+  },
+  "costUsd": 0.0022975,
+  "dbBytes": {
+    "before": 7945768,
+    "after": 7945768
+  },
+  "results": [
+    {
+      "caseId": "dr-01",
+      "category": "draft_reuse",
+      "passed": true,
+      "verdict": "pass",
+      "detail": "ok",
+      "latencyMs": 25272,
+      "costUsd": 0.0006785999999999999,
+      "interactionId": "i_yz3sfulqg8",
+      "question": "Turn yesterday's Slack status into three bullets for the standup doc."
+    },
+    {
+      "caseId": "dr-02",
+      "category": "draft_reuse",
+      "passed": true,
+      "verdict": "pass",
+      "detail": "ok",
+      "latencyMs": 54145,
+      "costUsd": 0.0016189000000000002,
+      "interactionId": "i_m7jy6x3wti",
+      "question": "Draft a mail to Sandra with the current Meridian date."
+    }
+  ]
+}

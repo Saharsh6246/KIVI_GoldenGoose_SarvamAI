@@ -201,26 +201,46 @@ Notable assertions, because they test the position rather than the plumbing:
 Failures are printed by the runner, listed in the report, and shown on `/evaluation`. They
 are not hidden.
 
-### The one failing case, and why it is the right failure
+### Why every search carries a revision check
 
-**27 of 28 pass. `dr-02` fails:** *"Draft a mail to Sandra with the current Meridian date."*
-Kivi answered **"I don't have the current Meridian date"** and refused to write the mail.
+*"Draft a mail to Sandra with the current Meridian date"* is a rewrite **and** a lookup, and
+it exposed something that turned out not to be about drafting at all.
 
-The date is in the corpus, and `cd-01` proves Kivi finds it — asked directly, it answers 21
-October with citations. On this compositional request the search queries the model formed
-missed the three dictations carrying the date, so retrieval came back without it.
+Ranked by similarity, the top hit for that request is:
 
-What it did next is the point. Faced with a request to *draft a mail*, holding sixteen
-retrieved dictations about Meridian and no date among them, it declined instead of writing a
-confident, well-formatted, plausible mail with an invented date. That is the position holding
-at the exact moment it is most expensive to hold it, and the failure mode it prevented — a
-fluent business email containing a wrong commitment sent to a client — is far worse than a
-refusal.
+> *"Sandra, Confirming the Meridian go live date of **14 October**."* — 6 August
 
-The honest fix is better retrieval for multi-step requests (query expansion, or letting
-`draft_from` pull the facts it needs rather than depending on the answering turn to have found
-them first). That is real work, and it is not done. The case is left failing rather than
-loosened until it passes.
+while the dictation that actually matters is three weeks later and ranks nowhere in the top
+fourteen:
+
+> *"Update on Meridian: we are moving the go live from the 14th to the **21st of October**."* — 28 August
+
+**Similarity retrieval is systematically biased against revisions.** The superseded statement
+is phrased like a confirmation, so it matches a request for "the current date" almost
+perfectly; the correction is phrased like a correction and loses. Left alone, Kivi writes a
+client a fluent, confident mail carrying a date that changed three weeks earlier.
+
+The first attempt put the fix inside `draft_from`. It passed in isolation and then failed in
+the full run, because the model answered that request with `search_dictations` and
+`get_dictation` and never called `draft_from` at all — the guard sat on a path the model was
+free to route around.
+
+So the check lives in **retrieval**, where the bias is. Every `search_dictations` result now
+carries `later_statements_you_must_check`: for entities named in the query, dictations that
+are newer than what the search returned and carry a commitment or a number — a month, a
+day-of-month, "go live", "moving", "delayed", a percentage. Newest first, with weekday-only
+mentions ranked below so twenty "heads down until Thursday" messages cannot push a revision
+out of the window. Whichever tool the model reaches for, the correction travels with the
+results.
+
+Two properties make it safe rather than merely helpful:
+
+- **It fires only when there is something to say.** No entity in the query, or no later dated
+  statement, and the field is absent entirely.
+- **It never raises the grounding score.** Revision candidates are marked `supplementary` in
+  the trace. An earlier version let them count, and *"what is Priya's phone number?"* stopped
+  refusing — the existence of later dated statements about Priya is not evidence that Kivi
+  knows her number. The evaluation caught it.
 
 ### One case was corrected, not the system
 
@@ -235,9 +255,14 @@ was wrong and the system was right, so the assertion was changed. The `expectati
 
 Honest ones.
 
-- **Compositional requests can under-retrieve.** See `dr-02` above: a request that needs a
-  lookup *and* a rewrite can fail to surface the fact the rewrite needs. It refuses rather
-  than inventing, but a refusal is still a failure to be useful.
+- **Revision detection is heuristic.** `dated_statements_by_subject` finds statements that
+  *could* revise a value by pattern-matching dates, numbers and words like "moving" or
+  "delayed"; the answering model decides which one is current. There is no temporal reasoner
+  retiring the superseded claim in the database — `entity_facts.state` exists for that and is
+  not yet driven. A revision phrased without any of those markers would be missed.
+- **The revision check depends on the entity being named in the query.** It keys off
+  capitalised names. "Draft a mail with the new date" — no entity named — falls back to plain
+  similarity retrieval and inherits its bias toward the superseded statement.
 
 - **Speech recognition is not implemented.** Transcripts are replayed through a client of our
   own design, as the assignment permits.

@@ -1,13 +1,13 @@
 {
-  "runId": "eval_b5hl35fkg9",
+  "runId": "eval_3t1dvms26a",
   "suite": "kivi-semantic-memory-v1",
-  "startedAt": "2026-09-12T17:17:34.530Z",
-  "finishedAt": "2026-09-12T17:24:53.864Z",
+  "startedAt": "2026-09-12T17:01:57.650Z",
+  "finishedAt": "2026-09-12T17:09:59.558Z",
   "valid": true,
   "pinnedNow": "2026-09-12T09:30:00+05:30",
   "summary": {
-    "passed": 28,
-    "failed": 0,
+    "passed": 27,
+    "failed": 1,
     "total": 28,
     "byCategory": {
       "episodic_locate": {
@@ -31,7 +31,7 @@
         "total": 3
       },
       "draft_reuse": {
-        "pass": 2,
+        "pass": 1,
         "total": 2
       },
       "entity_recall": {
@@ -46,13 +46,13 @@
   },
   "latencyMs": {
     "retrieval": {
-      "p50": 5662,
-      "p95": 12247
+      "p50": 5649,
+      "p95": 16781
     },
     "endToEnd": {
-      "p50": 18295,
-      "p95": 42347,
-      "max": 47108
+      "p50": 18057,
+      "p95": 48167,
+      "max": 54748
     },
     "note": "End-to-end includes a deliberate 6000ms gap between model calls (KIVI_RPM=10) to stay inside free-tier quota."
   },
@@ -69,10 +69,10 @@
     "ignored": 562,
     "events": 732
   },
-  "costUsd": 0.009961000000000001,
+  "costUsd": 0.012486900000000002,
   "dbBytes": {
     "before": 7945768,
-    "after": 7954008
+    "after": 7945768
   },
   "results": [
     {
@@ -81,9 +81,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 25366,
-      "costUsd": 0.0006585,
-      "interactionId": "i_ftj3ulhgtc",
+      "latencyMs": 31609,
+      "costUsd": 0.0009638000000000001,
+      "interactionId": "i_9b8r7ro4hy",
       "question": "Hey Kivi, find the dictation I did around 5 PM yesterday in Slack and polish it for the meeting I'm walking into."
     },
     {
@@ -92,9 +92,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 17768,
+      "latencyMs": 17499,
       "costUsd": 0.00034350000000000006,
-      "interactionId": "i_io21p9trn4",
+      "interactionId": "i_j4eio7lffb",
       "question": "What did I write in Linear about splitting a ticket?"
     },
     {
@@ -103,9 +103,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 18295,
-      "costUsd": 0.00035240000000000005,
-      "interactionId": "i_1icr0601ph",
+      "latencyMs": 18494,
+      "costUsd": 0.0003558,
+      "interactionId": "i_a826xqg602",
       "question": "What was the last thing I said in Slack yesterday?"
     },
     {
@@ -114,9 +114,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 17776,
-      "costUsd": 0.0003819,
-      "interactionId": "i_85x3hvb95z",
+      "latencyMs": 17537,
+      "costUsd": 0.00034370000000000006,
+      "interactionId": "i_7rsyzvmdps",
       "question": "When does Meridian go live?"
     },
     {
@@ -125,9 +125,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 23750,
-      "costUsd": 0.0005369000000000001,
-      "interactionId": "i_1qpuh2ayg0",
+      "latencyMs": 18057,
+      "costUsd": 0.00035630000000000004,
+      "interactionId": "i_qetnigww9k",
       "question": "Who is my contact at Fernway?"
     },
     {
@@ -136,9 +136,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 18325,
-      "costUsd": 0.0003585,
-      "interactionId": "i_iowsndgeb6",
+      "latencyMs": 18495,
+      "costUsd": 0.00035919999999999995,
+      "interactionId": "i_zjbat9m835",
       "question": "What command do I use to deploy ledger-svc to staging?"
     },
     {
@@ -147,9 +147,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 18036,
-      "costUsd": 0.00036030000000000003,
-      "interactionId": "i_gup6gbljff",
+      "latencyMs": 17663,
+      "costUsd": 0.0003447000000000001,
+      "interactionId": "i_24gi9uurg7",
       "question": "Who owns Tollgate now?"
     },
     {
@@ -158,9 +158,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 18179,
-      "costUsd": 0.00036770000000000005,
-      "interactionId": "i_z9z2utgkvq",
+      "latencyMs": 17924,
+      "costUsd": 0.00036570000000000005,
+      "interactionId": "i_x03t8xguna",
       "question": "When is the RCA due for the incident?"
     },
     {
@@ -169,9 +169,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "refused: Model found no answer in the retrieved dictations.",
-      "latencyMs": 35850,
-      "costUsd": 0.0008805,
-      "interactionId": "i_aeude6653z",
+      "latencyMs": 36029,
+      "costUsd": 0.0009358000000000001,
+      "interactionId": "i_411ztneoi1",
       "question": "What is Priya's phone number?"
     },
     {
@@ -180,9 +180,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "refused: Model found no answer in the retrieved dictations.",
-      "latencyMs": 17978,
-      "costUsd": 0.0003281,
-      "interactionId": "i_umiaykycpo",
+      "latencyMs": 17781,
+      "costUsd": 0.00032970000000000005,
+      "interactionId": "i_5h2qta5mys",
       "question": "What did I say about the Zurich office?"
     },
     {
@@ -191,9 +191,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "refused: Model found no answer in the retrieved dictations.",
-      "latencyMs": 30056,
-      "costUsd": 0.0006171,
-      "interactionId": "i_v0gbaj0yls",
+      "latencyMs": 42268,
+      "costUsd": 0.0009636,
+      "interactionId": "i_mstuue7zp9",
       "question": "How much is the Kestrel contract worth?"
     },
     {
@@ -202,9 +202,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "refused: Model found no answer in the retrieved dictations.",
-      "latencyMs": 18100,
+      "latencyMs": 17794,
       "costUsd": 0.000328,
-      "interactionId": "i_vjl32yjghw",
+      "interactionId": "i_zvypq4cxqi",
       "question": "What did I dictate about Project Halberd?"
     },
     {
@@ -213,9 +213,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "refused: Model found no answer in the retrieved dictations.",
-      "latencyMs": 42347,
-      "costUsd": 0.0010339000000000001,
-      "interactionId": "i_sum374yilr",
+      "latencyMs": 54748,
+      "costUsd": 0.0014358,
+      "interactionId": "i_08hl2l9nf6",
       "question": "Which airline did I book for the Tokyo trip?"
     },
     {
@@ -223,10 +223,10 @@
       "category": "must_not_learn",
       "passed": true,
       "verdict": "pass",
-      "detail": "refused: Nothing retrieved cleared the grounding threshold (best score 0.30 < 0.34).",
-      "latencyMs": 17582,
-      "costUsd": 0.0003394,
-      "interactionId": "i_zpzw84jpfr",
+      "detail": "ok",
+      "latencyMs": 17663,
+      "costUsd": 0.00034310000000000005,
+      "interactionId": "i_3a08zx8amh",
       "question": "Am I burned out?"
     },
     {
@@ -235,9 +235,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 24905,
-      "costUsd": 0.0007209,
-      "interactionId": "i_bauczzdgu1",
+      "latencyMs": 42505,
+      "costUsd": 0.0023125000000000003,
+      "interactionId": "i_xeuxu87fcm",
       "question": "Summarise everything I know about Meridian."
     },
     {
@@ -246,9 +246,9 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 17847,
-      "costUsd": 0.0003918,
-      "interactionId": "i_5xj5tzhxi3",
+      "latencyMs": 17454,
+      "costUsd": 0.00033910000000000006,
+      "interactionId": "i_e1q0wplg7l",
       "question": "Did I ever say Meridian was cancelled?"
     },
     {
@@ -257,20 +257,20 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 30002,
-      "costUsd": 0.0006781999999999999,
-      "interactionId": "i_ekiweacd0p",
+      "latencyMs": 30190,
+      "costUsd": 0.0007237999999999999,
+      "interactionId": "i_10dzc7n415",
       "question": "Turn yesterday's Slack status into three bullets for the standup doc."
     },
     {
       "caseId": "dr-02",
       "category": "draft_reuse",
-      "passed": true,
-      "verdict": "pass",
-      "detail": "ok",
-      "latencyMs": 47108,
-      "costUsd": 0.0012834,
-      "interactionId": "i_ev0bem9o09",
+      "passed": false,
+      "verdict": "fail",
+      "detail": "answer missing \"21\"",
+      "latencyMs": 48167,
+      "costUsd": 0.0013428000000000001,
+      "interactionId": "i_9e2cposz2j",
       "question": "Draft a mail to Sandra with the current Meridian date."
     },
     {
@@ -279,7 +279,7 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 2,
+      "latencyMs": 1,
       "costUsd": 0
     },
     {
@@ -306,7 +306,7 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 2,
+      "latencyMs": 1,
       "costUsd": 0
     },
     {
@@ -324,7 +324,7 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 3,
+      "latencyMs": 1,
       "costUsd": 0
     },
     {
@@ -333,7 +333,7 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 4,
+      "latencyMs": 2,
       "costUsd": 0
     },
     {
@@ -342,7 +342,7 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 1,
+      "latencyMs": 0,
       "costUsd": 0
     },
     {
@@ -360,7 +360,7 @@
       "passed": true,
       "verdict": "pass",
       "detail": "ok",
-      "latencyMs": 12,
+      "latencyMs": 5,
       "costUsd": 0
     }
   ]
